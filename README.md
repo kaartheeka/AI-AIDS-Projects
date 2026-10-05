@@ -1,16 +1,12 @@
-# UGV - Static Obstacles
+# UGV - Dynamic Obstacles
 
 ## Requirement
 
-Navigate a 70 x 70 grid from a user-selected start to a goal while avoiding known obstacles. Three obstacle-density levels are supported.
+Navigate when obstacles can move and are not known in advance.
 
-## Algorithm
+## Approach
 
-A* search with 8-direction movement.
-
-## Measures of Effectiveness
-
-The program reports path distance, number of path cells, nodes expanded, number of turns and search time.
+The UGV senses nearby obstacles, updates its internal map, replans with A*, and then moves one step. This repeats until the goal is reached or the step limit is reached.
 
 ## Run
 
